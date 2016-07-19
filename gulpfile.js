@@ -24,32 +24,15 @@ var onError = function(err) {
   this.emit('end');
 };
 
-// bundling js with browserify and watchify
-var b = watchify(browserify('./src/js/main', {
-  cache: {},
-  packageCache: {},
-  fullPaths: true
-}));
+// js
+gulp.task('js', function() {
+    return gulp.src(['./src/js/**/*']).pipe(gulp.dest('./build/js'));
+});
 
-gulp.task('js', bundle);
-b.on('update', bundle);
-b.on('log', gutil.log);
-
-function bundle() {
-  return b.bundle()
-    .on('error', onError)
-    .pipe(source('bundle.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init())
-    .pipe(prod ? babel({
-      presets: ['es2015']
-    }) : gutil.noop())
-    .pipe(concat('bundle.js'))
-    .pipe(!prod ? sourcemaps.write('.') : gutil.noop())
-    .pipe(prod ? streamify(uglify()) : gutil.noop())
-    .pipe(gulp.dest('./build/js'))
-    .pipe(browserSync.stream());
-}
+// images
+gulp.task('images', function() {
+    return gulp.src(['./src/images/**/*']).pipe(gulp.dest('./build/images'));
+});
 
 // html
 gulp.task('html', function() {
@@ -95,4 +78,4 @@ gulp.task('deploy', function() {
 });
 
 // use gulp-sequence to finish building html, sass and js before first page load
-gulp.task('default', gulpSequence(['html', 'sass', 'js'], 'serve'));
+gulp.task('default', gulpSequence(['html', 'sass', 'js', 'images'], 'serve'));
