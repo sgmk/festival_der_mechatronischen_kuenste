@@ -4,7 +4,16 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
 (function($) {
+
+    $.fn.preload = function() {
+        this.each(function(){
+            $('<img/>')[0].src = this;
+        });
+    }
+
+    $(['images/stempel_reworked_white.png']).preload();
 
 	skel.breakpoints({
 		xlarge: '(max-width: 1680px)',
