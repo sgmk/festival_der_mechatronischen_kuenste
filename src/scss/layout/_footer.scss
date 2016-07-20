@@ -14,7 +14,9 @@
 		margin: 0 0 (_size(element-margin) * 1.5) (_size(element-margin) * -1);
 
 		> * {
-			width: calc(50% - #{_size(element-margin)});
+			//width: calc(50% - #{_size(element-margin)});       // two sections next to each other
+            width: calc(100% - #{_size(element-margin)});        // one section
+            text-align: center;
 			margin-left: _size(element-margin);
 		}
 

@@ -26,12 +26,14 @@ var onError = function(err) {
 
 // js
 gulp.task('js', function() {
-    return gulp.src(['./src/js/**/*']).pipe(gulp.dest('./build/js'));
+    return gulp.src(['./src/js/**/*']).pipe(gulp.dest('./build/js'))
+    .pipe(browserSync.stream());
 });
 
 // images
 gulp.task('images', function() {
-    return gulp.src(['./src/images/**/*']).pipe(gulp.dest('./build/images'));
+    return gulp.src(['./src/images/**/*']).pipe(gulp.dest('./build/images'))
+    .pipe(browserSync.stream());
 });
 
 // html
@@ -67,6 +69,8 @@ gulp.task('serve', function() {
     }
   });
 
+  gulp.watch('./src/js/*', ['js']);
+  gulp.watch('./src/images/*', ['images']);
   gulp.watch('./src/templates/**/*', ['html']);
   gulp.watch('./src/scss/**/*.scss', ['sass']);
 });
