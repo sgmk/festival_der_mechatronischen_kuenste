@@ -2632,9 +2632,9 @@ table.alt tbody tr td {
     width: calc(100% - 2em);
     text-align: center;
     margin-left: 2em; }
-  #footer .copyright {
+  #footer .copyright a {
     width: 100%;
-    color: #f00;
+    color: #333;
     margin: 2.5em 0 2em 0;
     font-size: 1.2em;
     text-align: center; }
@@ -2711,3 +2711,6 @@ table.alt tbody tr td {
   display: block;
   transition: all 1s ease;
   text-align: center; }
+
+#mapid {
+  height: 280px; }

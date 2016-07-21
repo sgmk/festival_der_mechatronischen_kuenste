@@ -17,7 +17,7 @@ var sourcemaps   = require('gulp-sourcemaps');
 var concat       = require('gulp-concat');
 var babel        = require('gulp-babel');
 var prod         = gutil.env.prod;
-var ghPages = require('gulp-gh-pages');
+var rev         = require('gulp-date-rev');
 
 var onError = function(err) {
   console.log(err.message);
@@ -26,7 +26,7 @@ var onError = function(err) {
 
 // js
 gulp.task('js', function() {
-    return gulp.src(['./src/js/**/*']).pipe(gulp.dest('./build/js'))
+    return gulp.src(['./src/js/**/*']).pipe(rev('./build/js')).pipe(gulp.dest('./build/js'))
     .pipe(browserSync.stream());
 });
 
