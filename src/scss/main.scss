@@ -9,64 +9,111 @@
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+    */
 
-	@include skel-breakpoints((
-		xlarge: '(max-width: 1680px)',
-		large: '(max-width: 1280px)',
-		medium: '(max-width: 980px)',
-		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)',
-		xxsmall: '(max-width: 360px)'
-	));
+    @include skel-breakpoints((
+      xlarge: '(max-width: 1680px)',
+      large: '(max-width: 1280px)',
+      medium: '(max-width: 980px)',
+      small: '(max-width: 736px)',
+      xsmall: '(max-width: 480px)',
+      xxsmall: '(max-width: 360px)'
+      ));
 
-	@include skel-layout((
-		reset: 'full',
-		boxModel: 'border',
-		grid: ( gutters: 1.5em ),
-		breakpoints: (
-			small: (
-				grid: ( gutters: 1em ),
-			)
-		)
-	));
+    @include skel-layout((
+      reset: 'full',
+      boxModel: 'border',
+      grid: ( gutters: 1.5em ),
+      breakpoints: (
+       small: (
+        grid: ( gutters: 1em ),
+        )
+       )
+      ));
 
-	@mixin color($p) {
-		@include color-typography($p);
-		@include color-box($p);
-		@include color-button($p);
-		@include color-form($p);
-		@include color-icon($p);
-		@include color-list($p);
-		@include color-section($p);
-		@include color-table($p);
-		@include color-spotlight($p);
-	}
+    @mixin color($p) {
+      @include color-typography($p);
+      @include color-box($p);
+      @include color-button($p);
+      @include color-form($p);
+      @include color-icon($p);
+      @include color-list($p);
+      @include color-section($p);
+      @include color-table($p);
+      @include color-spotlight($p);
+  }
 
 // Base.
 
-	@import 'base/page';
-	@import 'base/typography';
+@import 'base/page';
+@import 'base/typography';
 
 // Component.
 
-	@import 'components/box';
-	@import 'components/button';
-	@import 'components/form';
-	@import 'components/icon';
-	@import 'components/image';
-	@import 'components/list';
-	@import 'components/section';
-	@import 'components/table';
-	@import 'components/features';
-	@import 'components/statistics';
-	@import 'components/spotlight';
+@import 'components/box';
+@import 'components/button';
+@import 'components/form';
+@import 'components/icon';
+@import 'components/image';
+@import 'components/list';
+@import 'components/section';
+@import 'components/table';
+@import 'components/features';
+@import 'components/statistics';
+@import 'components/spotlight';
 
 // Layout.
 
-	@import 'layout/header';
-	@import 'layout/nav';
-	@import 'layout/main';
-	@import 'layout/footer';
-	@import 'layout/wrapper';
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/main';
+@import 'layout/footer';
+@import 'layout/wrapper';
 
+
+#sponsor-container {
+    border-radius: 0;
+    display: inline-block;
+    width:100%;
+    margin:0px;
+}
+.sponsor-left ul {
+    margin: 0;
+    padding:0;
+    font-size: 17px;
+    width: 100%;
+}
+.sponsor-left ul li {
+    display:inline-block;
+    vertical-align: top;
+    width: 50%;
+    float:left;
+}
+
+.sponsor-left img {
+    max-height:100px;
+
+    @include breakpoint(large) {
+        min-width: 50%;
+        max-width: 50%;
+    }
+    @include breakpoint(small) {
+        max-width: 100%;
+        break: both;
+    }
+}
+
+.sponsor-left ul li a {
+    //color: #FFF;
+    text-decoration:none;
+    outline: none;
+    padding: 15px 0;
+    display: block;
+    //background: rgb(50,153,187);
+    transition: all 1s ease;
+    text-align:center;
+}
+.sponsor-left ul li a:active,
+.sponsor-left ul li a:hover {
+    //background: rgba(50,153,187,0.8);
+}
