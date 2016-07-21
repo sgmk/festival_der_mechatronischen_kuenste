@@ -4,7 +4,7 @@
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+    */
 /* Reset */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -1218,10 +1218,10 @@ body {
 
 body {
   background-color: #f00;
-  background-image: url("../images/overlay.png"), -moz-linear-gradient(45deg, #900 15%, #f00 85%);
-  background-image: url("../images/overlay.png"), -webkit-linear-gradient(45deg, #900 15%, #f00 85%);
-  background-image: url("../images/overlay.png"), -ms-linear-gradient(45deg, #900 15%, #f00 85%);
-  background-image: url("../images/overlay.png"), linear-gradient(45deg, #900 15%, #f00 85%); }
+  background-image: url("../images/overlay.png"), -moz-linear-gradient(45deg, #9f0 15%, #f00 85%);
+  background-image: url("../images/overlay.png"), -webkit-linear-gradient(45deg, #9f0 15%, #f00 85%);
+  background-image: url("../images/overlay.png"), -ms-linear-gradient(45deg, #9f0 15%, #f00 85%);
+  background-image: url("../images/overlay.png"), linear-gradient(45deg, #9f0 15%, #f00 85%); }
   body.is-loading *, body.is-loading *:before, body.is-loading *:after {
     -moz-animation: none !important;
     -webkit-animation: none !important;
@@ -1292,14 +1292,14 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none; }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 3.5em;
   line-height: 1.2; }
 
 h2 {
-  font-size: 1.5em; }
+  font-size: 3.5em; }
 
 h3 {
-  font-size: 1.25em; }
+  font-size: 4.25em; }
 
 h4 {
   font-size: 1.1em; }
@@ -2324,7 +2324,7 @@ table.alt tbody tr td {
   -ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
   transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
   background-color: #fff;
-  color: #f00;
+  color: #111;
   position: absolute;
   width: 64em;
   max-width: calc(100% - 4em);
@@ -2350,7 +2350,7 @@ table.alt tbody tr td {
   #nav hr {
     border-bottom-color: #dddddd; }
   #nav .marked {
-    background-color: #f00;
+    background-color: #111;
     color: #fff;
     padding: 10px;
     line-height: 2.3; }
@@ -2407,7 +2407,7 @@ table.alt tbody tr td {
 /* Main */
 #main {
   background-color: #fff;
-  color: #f00;
+  color: #111;
   border-radius: 0.25em; }
   #main input, #main select, #main textarea {
     color: #f00; }
@@ -2425,7 +2425,7 @@ table.alt tbody tr td {
   #main hr {
     border-bottom-color: #dddddd; }
   #main .marked {
-    background-color: #f00;
+    background-color: #111;
     color: #fff;
     padding: 10px;
     line-height: 2.3; }
@@ -2503,7 +2503,7 @@ table.alt tbody tr td {
     color: #dddddd; }
   #main input[type="checkbox"] + label,
   #main input[type="radio"] + label {
-    color: #f00; }
+    color: #111; }
     #main input[type="checkbox"] + label:before,
     #main input[type="radio"] + label:before {
       background: rgba(222, 222, 222, 0.25);
@@ -2634,8 +2634,9 @@ table.alt tbody tr td {
     margin-left: 2em; }
   #footer .copyright {
     width: 100%;
+    color: #f00;
     margin: 2.5em 0 2em 0;
-    font-size: 0.8em;
+    font-size: 1.2em;
     text-align: center; }
   @media screen and (max-width: 1280px) {
     #footer {
@@ -2673,3 +2674,40 @@ table.alt tbody tr td {
   @media screen and (max-width: 360px) {
     #wrapper {
       max-width: 100%; } }
+
+#sponsor-container {
+  border-radius: 0;
+  display: inline-block;
+  width: 100%;
+  margin: 0px; }
+
+.sponsor-left ul {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  width: 100%; }
+
+.sponsor-left ul li {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  float: left; }
+
+.sponsor-left img {
+  max-height: 100px; }
+  @media screen and (max-width: 1280px) {
+    .sponsor-left img {
+      min-width: 50%;
+      max-width: 50%; } }
+  @media screen and (max-width: 736px) {
+    .sponsor-left img {
+      max-width: 100%;
+      break: both; } }
+
+.sponsor-left ul li a {
+  text-decoration: none;
+  outline: none;
+  padding: 15px 0;
+  display: block;
+  transition: all 1s ease;
+  text-align: center; }
