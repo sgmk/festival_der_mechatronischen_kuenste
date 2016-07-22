@@ -25,6 +25,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-minify-css": "^1.1.1",
     "gulp-minify-html": "^1.0.2",
+    "gulp-rev-hash": "0.0.2",
     "gulp-sass": "^2.0.0",
     "gulp-sequence": "^0.3.2",
     "gulp-sourcemaps": "^1.6.0",
@@ -39,7 +40,5 @@
   "dependencies": {
     "jquery": "^2.1.4"
   },
-  "browser": {
-
-  }
+  "browser": {}
 }

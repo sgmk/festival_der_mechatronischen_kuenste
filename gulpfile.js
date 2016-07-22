@@ -17,7 +17,7 @@ var sourcemaps   = require('gulp-sourcemaps');
 var concat       = require('gulp-concat');
 var babel        = require('gulp-babel');
 var prod         = gutil.env.prod;
-var rev         = require('gulp-date-rev');
+var rev          = require('gulp-rev-hash');
 
 var onError = function(err) {
   console.log(err.message);
@@ -39,7 +39,8 @@ gulp.task('images', function() {
 // html
 gulp.task('html', function() {
   return gulp.src('./src/templates/**/*')
-    .pipe(processhtml())
+    //.pipe(processhtml())
+    .pipe(rev({assetsDir: 'build'}))
     .pipe(gulp.dest('build'))
     .pipe(browserSync.stream());
 });
@@ -75,11 +76,6 @@ gulp.task('serve', function() {
   gulp.watch('./src/scss/**/*.scss', ['sass']);
 });
 
-// deploy to gh-pages
-gulp.task('deploy', function() {
-  return gulp.src('./build/**/*')
-    .pipe(ghPages());
-});
 
 // use gulp-sequence to finish building html, sass and js before first page load
-gulp.task('default', gulpSequence(['html', 'sass', 'js', 'images'], 'serve'));
+gulp.task('default', gulpSequence(['sass', 'html', 'js', 'images'], 'serve'));
