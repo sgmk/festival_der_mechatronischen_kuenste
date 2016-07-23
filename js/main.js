@@ -145,17 +145,4 @@
 
  });
 
-
-    // generate map
-    var mymap = L.map('mapid').setView([47.377842, 8.530799], 16);
-
-    L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RhaGwiLCJhIjoiZ2s4SmkzcyJ9.brSDIxU_wQOI5a-2lYnyMw', {
-        attribution: 'Map data &copy; <a href="http://www.openstreetmap.org/search?query=47.377842%2C%208.530799#map=18/47.37784/8.53080">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-        maxZoom: 22,
-        //id: 'your.mapbox.project.id',
-        accessToken: 'pk.eyJ1Ijoic3RhaGwiLCJhIjoiZ2s4SmkzcyJ9.brSDIxU_wQOI5a-2lYnyMw'
-    }).addTo(mymap);
-
-    var marker = L.marker([47.377842, 8.530799], {fillColor: 'red', color: 'red'}).addTo(mymap);
-
 })(jQuery);
