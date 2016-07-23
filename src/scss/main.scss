@@ -2,7 +2,7 @@
 @import 'libs/functions';
 @import 'libs/mixins';
 @import 'libs/skel';
-@import 'font-awesome.min.css';
+//@import 'font-awesome.min.css';
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 
 /*
@@ -91,7 +91,6 @@
 }
 
 .sponsor-left img {
-    max-height:100px;
 
     @include breakpoint(large) {
         min-width: 50%;
@@ -122,4 +121,13 @@
 
 section img {
     height: 200px;
+}
+
+section.artist {
+    padding: 20px;
+    margin: 30px;
+}
+
+section.artist p {
+    margin-bottom: 5px;
 }
