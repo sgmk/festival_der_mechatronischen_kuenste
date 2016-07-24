@@ -76,10 +76,10 @@
                 <h1>Eröffnung</h1>
                 <h5>19:00</h5>
                 <p>
-                 Eröffnung Ausstellung
-             </p>
-             <h5>19:30</h5>
-             <p>
+                   Eröffnung Ausstellung
+               </p>
+               <h5>19:30</h5>
+               <p>
                 Eröffnungsrede mit Raffael Dörig<br />
                 10 Jahre der Zusammenarbeit mit der SGMK.<br />Ehemaliger Kurator Plug-In und Shift Festival, Basel. Direktor Kunsthaus Langenthal.</p>
 
@@ -97,7 +97,7 @@
                     <img src="images/RalfSchreiber_konzert2.jpg" />
                 </p>
                 <p>
-                <a href="/artists.html#mono">Kasia Justka (PO/DE)</a><br />
+                    <a href="/artists.html#mono">Kasia Justka (PO/DE)</a><br />
                     <img src="images/kasjust01.jpg"  />
                 </p>
                 <h2>Live acts</h2>
@@ -298,17 +298,19 @@
 <script src="js/main.js?v=1177ef753d16dac57452b3abaf83677e"></script>
 <!-- end -->
 
-    // generate map
-    var mymap = L.map('mapid').setView([47.377842, 8.530799], 16);
+    <script type="text/javascript">
+        // generate map
+        var mymap = L.map('mapid').setView([47.377842, 8.530799], 16);
 
-    L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RhaGwiLCJhIjoiZ2s4SmkzcyJ9.brSDIxU_wQOI5a-2lYnyMw', {
-        attribution: 'Map data &copy; <a href="http://www.openstreetmap.org/search?query=47.377842%2C%208.530799#map=18/47.37784/8.53080">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-        maxZoom: 22,
-        //id: 'your.mapbox.project.id',
-        accessToken: 'pk.eyJ1Ijoic3RhaGwiLCJhIjoiZ2s4SmkzcyJ9.brSDIxU_wQOI5a-2lYnyMw'
-    }).addTo(mymap);
+        L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RhaGwiLCJhIjoiZ2s4SmkzcyJ9.brSDIxU_wQOI5a-2lYnyMw', {
+            attribution: 'Map data &copy; <a href="http://www.openstreetmap.org/search?query=47.377842%2C%208.530799#map=18/47.37784/8.53080">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+            maxZoom: 22,
+            //id: 'your.mapbox.project.id',
+            accessToken: 'pk.eyJ1Ijoic3RhaGwiLCJhIjoiZ2s4SmkzcyJ9.brSDIxU_wQOI5a-2lYnyMw'
+        }).addTo(mymap);
 
-    var marker = L.marker([47.377842, 8.530799], {fillColor: 'red', color: 'red'}).addTo(mymap);
+        var marker = L.marker([47.377842, 8.530799], {fillColor: 'red', color: 'red'}).addTo(mymap);
+    </script>
 
 </body>
 
