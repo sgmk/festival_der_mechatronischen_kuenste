@@ -1301,7 +1301,9 @@ h3 {
   font-size: 4.25em; }
 
 h4 {
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  font-weight: 380;
+  margin: 0px 0px; }
 
 h5 {
   font-size: 0.9em; }
