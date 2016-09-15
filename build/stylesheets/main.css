@@ -2727,3 +2727,9 @@ section.artist p {
 
 img {
   margin-top: 10px; }
+
+.slick-slide img {
+  height: 800px; }
+
+.slick-arrow {
+  background: #f00 !important; }
