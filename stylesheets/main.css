@@ -2243,7 +2243,19 @@ table.alt tbody tr td {
 /* Header */
 #header {
   padding: 5em 5em 1em 5em ;
-  text-align: center; }
+  text-align: center;
+  /*
+		body.is-loading & {
+			&.alt {
+				> * {
+					opacity: 0;
+				}
+
+				.logo {
+					@include vendor('transform', 'scale(0.8) rotate(-30deg)');
+				}
+			}
+		}*/ }
   #header h1 {
     margin: 0 0 0.25em 0; }
   #header p {
@@ -2310,13 +2322,6 @@ table.alt tbody tr td {
       padding: 2.5em 1em 0.1em 1em ; }
       #header.alt {
         padding: 3.5em 1em 0.5em 1em ; } }
-  body.is-loading #header.alt > * {
-    opacity: 0; }
-  body.is-loading #header.alt .logo {
-    -moz-transform: scale(0.8) rotate(-30deg);
-    -webkit-transform: scale(0.8) rotate(-30deg);
-    -ms-transform: scale(0.8) rotate(-30deg);
-    transform: scale(0.8) rotate(-30deg); }
 
 /* Nav */
 #nav {
