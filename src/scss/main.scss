@@ -136,9 +136,13 @@ img {
     margin-top: 10px;
 }
 
+.slideshow {
+    width: 100%;
+}
 
 .slick-slide img {
-    height: 800px;
+    height: auto;
+    width: 100%;
 }
 
 .slick-arrow {
